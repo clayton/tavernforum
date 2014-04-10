@@ -32,20 +32,20 @@ guard :shell do
   watch('.guard_result') { @blinky_tape.set_status! }
 end
 
-guard 'spork', :rspec_env => { 'RAILS_ENV' => 'guard' }, :rspec_port => 8888, :rspec => true, :aggressive_kill => false, :wait => 60 do
-  watch('config/application.rb')
-  watch('config/routes.rb')
-  watch('config/environment.rb')
-  watch(%r{^config/environments/.*\.rb$})
-  watch(%r{^config/initializers/.*\.rb$})
-  watch('Gemfile')
-  watch('Gemfile.lock')
-  watch('spec/spec_helper.rb') { :rspec }
-  watch('test/test_helper.rb') { :test_unit }
-  watch(%r{features/support/}) { :cucumber }
-  watch(%r{^app/serializers/(.+)\.rb})
-  watch(/^lib\/grammars\/.*\.treetop$/)
-end
+# guard 'spork', :rspec_env => { 'RAILS_ENV' => 'guard' }, :rspec_port => 8888, :rspec => true, :aggressive_kill => false, :wait => 60 do
+#   watch('config/application.rb')
+#   watch('config/routes.rb')
+#   watch('config/environment.rb')
+#   watch(%r{^config/environments/.*\.rb$})
+#   watch(%r{^config/initializers/.*\.rb$})
+#   watch('Gemfile')
+#   watch('Gemfile.lock')
+#   watch('spec/spec_helper.rb') { :rspec }
+#   watch('test/test_helper.rb') { :test_unit }
+#   watch(%r{features/support/}) { :cucumber }
+#   watch(%r{^app/serializers/(.+)\.rb})
+#   watch(/^lib\/grammars\/.*\.treetop$/)
+# end
 
 guard 'rspec', :cmd => 'rspec --drb --drb-port 8888', :env => {'RAILS_ENV' => 'guard'}, :all_on_start => false, :all_after_pass => false do
   watch(%r{^spec/.+_spec\.rb$})

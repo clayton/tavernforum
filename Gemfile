@@ -15,6 +15,7 @@ gem 'spring', group: :development
 gem 'eco'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'rails_backbone_generators', :group => [:development]
+gem 'rest_controller_generators', :group => [:development]
 
 group :development, :test, :guard do
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
@@ -22,7 +23,7 @@ group :development, :test, :guard do
   gem 'letters'
   gem 'serialport'
   gem 'rspec-rails'
-  gem 'spork-rails', :github => 'sporkrb/spork-rails'
+  # gem 'spork-rails', :github => 'sporkrb/spork-rails'
   gem 'unicorn'
   gem 'poltergeist'
 end
@@ -31,7 +32,7 @@ end
 group :development, :test, :guard do
   gem 'guard', :require => false
   gem 'guard-shell', :require => false
-  gem 'guard-spork', :require => false
+  # gem 'guard-spork', :require => false
   gem 'guard-rspec', :require => false
   gem 'listen', :require => false
   gem 'rb-inotify', :require => false
