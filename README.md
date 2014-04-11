@@ -1,4 +1,4 @@
 tavernforum
 ===========
 
-Tavern Forum
+Tavern Forum (MIT)
