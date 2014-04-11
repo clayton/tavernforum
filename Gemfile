@@ -21,6 +21,7 @@ group :development, :test, :guard do
   gem "passenger"
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
   gem "jasminerice-runner"
+  gem "selenium-webdriver"
   gem 'letters'
   gem 'serialport'
   gem 'rspec-rails'
