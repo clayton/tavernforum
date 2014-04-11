@@ -18,6 +18,7 @@ gem 'rails_backbone_generators', :group => [:development]
 gem 'rest_controller_generators', :group => [:development]
 
 group :development, :test, :guard do
+  gem "passenger"
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
   gem "jasminerice-runner"
   gem 'letters'
@@ -26,10 +27,6 @@ group :development, :test, :guard do
   # gem 'spork-rails', :github => 'sporkrb/spork-rails'
   gem 'unicorn'
   gem 'poltergeist'
-end
-
-# guard support
-group :development, :test, :guard do
   gem 'guard', :require => false
   gem 'guard-shell', :require => false
   # gem 'guard-spork', :require => false
