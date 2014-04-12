@@ -21,7 +21,6 @@ group :development, :test, :guard do
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
   gem "jasminerice-runner"
   gem "passenger"
-  gem "selenium-webdriver"
   gem 'blinky-cloud', :require => false
   gem 'blinky-tape-test-status-guard', :require => false
   gem 'guard', :require => false
