@@ -18,6 +18,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test, :guard do
+  gem "jasmine"
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
   gem "jasminerice-runner"
   gem "passenger"
