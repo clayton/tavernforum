@@ -6,11 +6,12 @@ before_install:
   - tar -xf phantomjs-1.9.1-linux-x86_64.tar.bz2
   - sudo rm -rf /usr/local/phantomjs
   - sudo mv phantomjs-1.9.1-linux-x86_64 /usr/local/phantomjs
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - "export SECRET_KEY_BASE=`rake secret`"
+  - "find . -name 'secrets.yml'"
   - "cat `find . -name 'secrets.yml'`"
   - "echo $SECRET_KEY_BASE"
   - "echo $RAILS_ENV"
+  - "exit 1"
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 script: "bundle exec rspec spec && bundle exec guard-jasmine --server-timeout=120 --verbose --errors=always"
