@@ -10,4 +10,7 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - "export SECRET_KEY_BASE=`rake secret`"
+  - "cat config/secrets.yml"
+  - "echo $SECRET_KEY_BASE"
+  - "echo $RAILS_ENV"
 script: "bundle exec rspec spec && bundle exec guard-jasmine --server-timeout=120 --verbose --errors=always"
