@@ -9,7 +9,7 @@ before_install:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - "ls -lah"
+  - "ls -lah config"
   - "pwd"
   - "find . -name 'secrets.yml'"
   - "cat `find . -name 'secrets.yml'`"
