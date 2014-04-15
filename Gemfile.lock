@@ -35,7 +35,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    awesome_print (1.2.0)
     blinky-cloud (1.1.1)
       blinky-tape-test-status
     blinky-tape-test-status (1.1.0)
@@ -67,7 +66,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    colorize (0.7.2)
     daemon_controller (1.1.8)
     daemons (1.1.9)
     delayed_job (2.0.6)
@@ -126,11 +124,6 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     kgio (2.9.2)
-    letters (0.4.1)
-      activesupport
-      awesome_print
-      colorize
-      xml-simple
     libv8 (3.16.14.3)
     listen (2.7.1)
       celluloid (>= 0.15.2)
@@ -189,8 +182,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
-    rdoc (4.1.1)
-      json (~> 1.4)
     ref (1.0.5)
     rest_controller_generators (1.0.0)
     rspec (2.14.1)
@@ -207,9 +198,6 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    sdoc (0.4.0)
-      json (~> 1.8)
-      rdoc (~> 4.0, < 5.0)
     serialport (1.3.0)
     slop (3.5.0)
     spring (1.1.2)
@@ -244,7 +232,6 @@ GEM
       rack
       raindrops (~> 0.7)
     websocket-driver (0.3.2)
-    xml-simple (1.1.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -254,8 +241,8 @@ PLATFORMS
 DEPENDENCIES
   blinky-cloud
   blinky-tape-test-status-guard
-  bootstrap-sass (~> 3.0.3.0)
-  coffee-rails (~> 4.0.0)
+  bootstrap-sass
+  coffee-rails
   eco
   guard
   guard-bundler
@@ -269,7 +256,6 @@ DEPENDENCIES
   jasminerice-runner
   jbuilder (~> 2.0)
   jquery-rails
-  letters
   listen
   mysql2
   passenger
@@ -279,8 +265,7 @@ DEPENDENCIES
   rb-inotify
   rest_controller_generators
   rspec
-  sass-rails (~> 4.0.3)
-  sdoc (~> 0.4.0)
+  sass-rails
   serialport
   spring
   therubyracer
