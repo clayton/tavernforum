@@ -9,11 +9,7 @@ before_install:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - "ls -lah config"
-  - "pwd"
-  - "find . -name 'secrets.yml'"
-  - "cat `find . -name 'secrets.yml'`"
+  - "export SECRET_KEY_BASE=`date +%s | sha256sum | base64 | head -c 32 ; echo -n`"
   - "echo $SECRET_KEY_BASE"
-  - "echo $RAILS_ENV"
-  - "exit 1"
+  - "cp config/secrets.example.yml config/secrets.yml"
 script: "bundle exec rspec spec && bundle exec guard-jasmine --server-timeout=120 --verbose --errors=always"
