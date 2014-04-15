@@ -40,6 +40,7 @@ group :development, :guard do
 end
 
 group :test, :guard, :development do
+  gem 'sqlite3'
   gem 'jasmine'
   gem 'jasminerice', :git => 'https://github.com/bradphelan/jasminerice.git'
   gem 'jasminerice-runner'
