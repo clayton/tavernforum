@@ -1,6 +1,9 @@
 language: ruby
+cache: bundler
 rvm:
   - "2.0.0"
+install:
+  - "bundle install --without development --deployment"
 before_install:
   - wget http://phantomjs.googlecode.com/files/phantomjs-1.9.1-linux-x86_64.tar.bz2
   - tar -xf phantomjs-1.9.1-linux-x86_64.tar.bz2
